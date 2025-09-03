@@ -1,4 +1,6 @@
-import "./index.css"
+import "./index.css";
+import cv from "./assets/VictorFigueiraCV.pdf";
+import myphoto from "./assets/minhaimagem.png";
 import logopedefacil from "./assets/logopedefacil.jpg";
 import React from "react";
 import { motion } from "framer-motion";
@@ -15,7 +17,6 @@ import {
   Boxes,
   Bot,
 } from "lucide-react";
-
 
 const ME = {
   name: "Victor Figueira",
@@ -86,25 +87,33 @@ const SectionTitle = ({ title, subtitle }) => (
 );
 
 const NavBar = () => (
-<nav className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 bg-slate-900/80 border-b border-slate-800">
-  <Container className="flex items-center justify-between py-3">
-    <a href="#home" className="text-slate-100 font-bold tracking-tight">
-      {ME.name}
-    </a>
-    <div className="hidden md:flex items-center gap-6 text-slate-300">
-      <a className="hover:text-white" href="#about">Sobre</a>
-      <a className="hover:text-white" href="#projects">Projetos</a>
-      <a className="hover:text-white" href="#skills">Skills</a>
-      <a className="hover:text-white" href="#contact">Contato</a>
-      <a
-        href="#projects"
-        className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 transition"
-      >
-        Ver Projetos <ArrowRight className="w-4 h-4" />
+  <nav className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 bg-slate-900/80 border-b border-slate-800">
+    <Container className="flex items-center justify-between py-3">
+      <a href="#home" className="text-slate-100 font-bold tracking-tight">
+        {ME.name}
       </a>
-    </div>
-  </Container>
-</nav>
+      <div className="hidden md:flex items-center gap-6 text-slate-300">
+        <a className="hover:text-white" href="#about">
+          Sobre
+        </a>
+        <a className="hover:text-white" href="#projects">
+          Projetos
+        </a>
+        <a className="hover:text-white" href="#skills">
+          Skills
+        </a>
+        <a className="hover:text-white" href="#contact">
+          Contato
+        </a>
+        <a
+          href="#projects"
+          className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 transition"
+        >
+          Ver Projetos <ArrowRight className="w-4 h-4" />
+        </a>
+      </div>
+    </Container>
+  </nav>
 );
 
 const Hero = () => (
@@ -140,35 +149,69 @@ const Hero = () => (
           </a>
         </div>
         <div className="mt-8 flex items-center gap-4 text-slate-300">
-          <a className="hover:text-white" href={ME.links.github} aria-label="GitHub">
+          <a
+            className="hover:text-white"
+            href={ME.links.github}
+            aria-label="GitHub"
+          >
             <Github className="w-6 h-6" />
           </a>
-          <a className="hover:text-white" href={ME.links.linkedin} aria-label="LinkedIn">
+          <a
+            className="hover:text-white"
+            href={ME.links.linkedin}
+            aria-label="LinkedIn"
+          >
             <Linkedin className="w-6 h-6" />
           </a>
-          <a className="hover:text-white" href={ME.links.email} aria-label="Email">
+          <a
+            className="hover:text-white"
+            href={ME.links.email}
+            aria-label="Email"
+          >
             <Mail className="w-6 h-6" />
           </a>
-          <a className="hover:text-white" href={ME.links.phone} aria-label="Telefone">
+          <a
+            className="hover:text-white"
+            href={ME.links.phone}
+            aria-label="Telefone"
+          >
             <Phone className="w-6 h-6" />
           </a>
         </div>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="order-1 md:order-2"
+        transition={{ duration: 0.8 }}
+        className="flex justify-center items-center py-12"
       >
-        <div className="relative aspect-[4/3] rounded-3xl bg-gradient-to-br from-blue-600/30 via-purple-600/20 to-cyan-500/20 border border-slate-700 p-1 overflow-hidden shadow-2xl">
-          <div className="absolute inset-0 m-4 rounded-2xl bg-slate-900/60 border border-slate-700 backdrop-blur-sm grid place-items-center">
-            <div className="text-center">
-              <p className="text-slate-400 text-sm">Preview do Portfólio</p>
-              <h3 className="mt-2 text-slate-100 text-xl font-semibold">Victor Figueira</h3>
-              <p className="mt-1 text-slate-400">React • Node.js • Spring Boot</p>
-            </div>
-          </div>
+        <div className="relative bg-gradient-to-br from-blue-600/30 via-purple-600/20 to-cyan-500/20 border border-slate-700 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl backdrop-blur-md hover:scale-105 transition-transform">
+          {/* Avatar */}
+          <img
+            src={myphoto}
+            alt="Foto de Victor Figueira"
+            className="w-28 h-28 mx-auto rounded-full border-4 border-blue-500 shadow-md object-cover"
+          />
+
+          {/* Nome */}
+          <h3 className="mt-4 text-2xl font-bold text-slate-100">
+            Victor Figueira
+          </h3>
+
+          {/* Stack */}
+          <p className="mt-2 text-slate-300 text-sm">
+            React • Node.js • Spring Boot
+          </p>
+
+          {/* Botão */}
+          <a
+            href={cv}
+            download="VictorFigueiraCV.pdf"
+            className="mt-6 inline-block px-5 py-2 rounded-xl font-semibold bg-blue-600 text-white hover:bg-blue-500 transition"
+          >
+            📄 Baixar CV
+          </a>
         </div>
       </motion.div>
     </Container>
@@ -246,7 +289,10 @@ const Projects = () => (
 );
 
 const Skills = () => (
-  <section id="skills" className="py-20 bg-slate-950/40 border-y border-slate-800">
+  <section
+    id="skills"
+    className="py-20 bg-slate-950/40 border-y border-slate-800"
+  >
     <Container>
       <SectionTitle
         title="Habilidades"
@@ -258,7 +304,9 @@ const Skills = () => (
             key={s.name}
             className="flex items-center gap-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
           >
-            <div className="rounded-xl border border-slate-700 bg-slate-800 p-2">{s.icon}</div>
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-2">
+              {s.icon}
+            </div>
             <span className="text-slate-200 font-medium">{s.name}</span>
           </div>
         ))}
@@ -269,47 +317,52 @@ const Skills = () => (
 
 const About = () => (
   <section id="about" className="py-20">
-    <Container>
-      <SectionTitle
-        title="Sobre mim"
-        subtitle="Estudante de Desenvolvimento de Sistemas na CESAR School 3° Periodo. Experiência com front-end (React), back-end (Node.js e Spring Boot) e projetos práticos em Python e C++ para IoT."
-      />
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
-          <h3 className="text-slate-100 font-semibold">O que me move</h3>
-          <p className="mt-2 text-slate-300">
-            Gosto de resolver problemas reais com código, criar interfaces limpas e sistemas
-            performáticos. Curto boas práticas, testes e documentação objetiva.
-          </p>
-          <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">
-            <li>Foco em DX e UX.</li>
-            <li>Boas práticas de arquitetura e versionamento (Git Flow).</li>
-            <li>Interesse por IA aplicada a produtos.</li>
-          </ul>
+<Container>
+  <SectionTitle
+    title="Sobre mim"
+    subtitle="Estudante de Desenvolvimento de Sistemas na CESAR School (3° Período), com experiência em front-end (React), back-end (Node.js e Spring Boot) e projetos aplicados em Python e C++."
+  />
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="md:col-span-2 rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+      <h3 className="text-slate-100 font-semibold">O que me move</h3>
+      <p className="mt-2 text-slate-300">
+        Sou motivado pelo desejo de construir soluções digitais eficientes e de
+        impacto. Busco sempre unir boas práticas de desenvolvimento com foco em
+        escalabilidade e qualidade de código. Tenho facilidade em aprender novas
+        tecnologias e me adaptar a diferentes contextos de projeto.
+      </p>
+      <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">
+        <li>Aplicar metodologias ágeis e boas práticas de versionamento (Git Flow).</li>
+        <li>Desenvolver aplicações com foco em performance e usabilidade.</li>
+        <li>Aprender continuamente e explorar novas ferramentas e frameworks.</li>
+        <li>Colaborar em equipe, comunicando ideias de forma clara e objetiva.</li>
+        <li>Contribuir para projetos que tragam valor real para empresas e usuários.</li>
+      </ul>
+    </div>
+    <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+      <h3 className="text-slate-100 font-semibold">Em números</h3>
+      <div className="mt-3 grid grid-cols-2 gap-3 text-center">
+        <div className="rounded-2xl border border-slate-800 p-4">
+          <div className="text-2xl font-bold text-white">+8</div>
+          <div className="text-slate-400 text-sm">Repositórios no GitHub</div>
         </div>
-        <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
-          <h3 className="text-slate-100 font-semibold">Em números</h3>
-          <div className="mt-3 grid grid-cols-2 gap-3 text-center">
-            <div className="rounded-2xl border border-slate-800 p-4">
-              <div className="text-2xl font-bold text-white">+8</div>
-              <div className="text-slate-400 text-sm">Repositórios</div>
-            </div>
-            <div className="rounded-2xl border border-slate-800 p-4">
-              <div className="text-2xl font-bold text-white">3</div>
-              <div className="text-slate-400 text-sm">Stacks principais</div>
-            </div>
-            <div className="rounded-2xl border border-slate-800 p-4">
-              <div className="text-2xl font-bold text-white">3</div>
-              <div className="text-slate-400 text-sm">Projetos destaque</div>
-            </div>
-            <div className="rounded-2xl border border-slate-800 p-4">
-              <div className="text-2xl font-bold text-white">∞</div>
-              <div className="text-slate-400 text-sm">Vontade de aprender</div>
-            </div>
-          </div>
+        <div className="rounded-2xl border border-slate-800 p-4">
+          <div className="text-2xl font-bold text-white">3</div>
+          <div className="text-slate-400 text-sm">Stacks principais</div>
+        </div>
+        <div className="rounded-2xl border border-slate-800 p-4">
+          <div className="text-2xl font-bold text-white">3</div>
+          <div className="text-slate-400 text-sm">Projetos em destaque</div>
+        </div>
+        <div className="rounded-2xl border border-slate-800 p-4">
+          <div className="text-2xl font-bold text-white">∞</div>
+          <div className="text-slate-400 text-sm">Vontade de evoluir</div>
         </div>
       </div>
-    </Container>
+    </div>
+  </div>
+</Container>
+
   </section>
 );
 
@@ -324,16 +377,28 @@ const Contact = () => (
         <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
           <h4 className="text-slate-100 font-semibold mb-3">Vamos conversar</h4>
           <div className="space-y-3 text-slate-300">
-            <a className="flex items-center gap-2 hover:text-white" href={ME.links.github}>
+            <a
+              className="flex items-center gap-2 hover:text-white"
+              href={ME.links.github}
+            >
               <Github className="w-5 h-5" /> GitHub
             </a>
-            <a className="flex items-center gap-2 hover:text-white" href={ME.links.linkedin}>
+            <a
+              className="flex items-center gap-2 hover:text-white"
+              href={ME.links.linkedin}
+            >
               <Linkedin className="w-5 h-5" /> LinkedIn
             </a>
-            <a className="flex items-center gap-2 hover:text-white" href={ME.links.email}>
+            <a
+              className="flex items-center gap-2 hover:text-white"
+              href={ME.links.email}
+            >
               <Mail className="w-5 h-5" /> Email
             </a>
-            <a className="flex items-center gap-2 hover:text-white" href={ME.links.phone}>
+            <a
+              className="flex items-center gap-2 hover:text-white"
+              href={ME.links.phone}
+            >
               <Phone className="w-5 h-5" /> Telefone
             </a>
           </div>
@@ -383,11 +448,19 @@ const Footer = () => (
   <footer className="py-10 border-t border-slate-800">
     <Container>
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
-        <p>© {new Date().getFullYear()} {ME.name}. Todos os direitos reservados.</p>
+        <p>
+          © {new Date().getFullYear()} {ME.name}. Todos os direitos reservados.
+        </p>
         <div className="flex items-center gap-4">
-          <a className="hover:text-white" href="#home">Topo</a>
-          <a className="hover:text-white" href="#projects">Projetos</a>
-          <a className="hover:text-white" href="#contact">Contato</a>
+          <a className="hover:text-white" href="#home">
+            Topo
+          </a>
+          <a className="hover:text-white" href="#projects">
+            Projetos
+          </a>
+          <a className="hover:text-white" href="#contact">
+            Contato
+          </a>
         </div>
       </div>
     </Container>
