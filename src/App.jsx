@@ -1,6 +1,9 @@
 import "./index.css";
 import cv from "./assets/VictorFigueiraCV.pdf";
 import myphoto from "./assets/minhaimagem.png";
+import logofluflu from "./assets/logofluflu.png";
+import logomobigo from "./assets/logomobigo.png";
+
 import logopedefacil from "./assets/logopedefacil.jpg";
 import React from "react";
 import { motion } from "framer-motion";
@@ -48,27 +51,28 @@ const PROJECTS = [
       "Front-end em React e back-end em Spring Boot. Gestão de cardápio, pedidos e autenticação.",
     tech: ["React", "Tailwind", "Spring Boot", "PostgreSQL"],
     demo: "#",
-    repo: "#",
+    repo: "https://github.com/FIGU3IR4/pedefacil",
     image: logopedefacil,
   },
-  {
-    title: "Estoque Construção Civil – Web + IA",
-    description:
-      "Sistema de estoque com previsão de consumo e sugestão de compra usando IA.",
-    tech: ["React", "Node.js", "Express", "Prisma", "Python"],
-    demo: "#",
-    repo: "#",
-    image: null,
-  },
-  {
-    title: "Simulador de Banco (Java)",
-    description:
-      "Desafio acadêmico sem persistência: contas, transferências e relatórios em console/CLI.",
-    tech: ["Java", "OOP"],
-    demo: "#",
-    repo: "#",
-    image: null,
-  },
+{
+  title: "Mobility Go – Sistema de Aluguel de Carros",
+  description:
+    "Aplicação em Python puro para gerenciamento de aluguel de carros, incluindo cadastro de veículos, controle de clientes e cálculo de tarifas.",
+  tech: ["Python"],
+  repo: "https://github.com/FIGU3IR4/Sistema_carros_versao_final",
+  image: logomobigo,
+},
+
+{
+  title: "Fluflu Pet – Plataforma de Clínicas Veterinárias",
+  description:
+    "Aplicação desenvolvida em Node.js, pensada para web, que reúne diversas clínicas veterinárias em um só lugar, facilitando o agendamento de consultas e a gestão de serviços para clientes e administradores.",
+  tech: ["Node.js"],
+  demo: "#",
+  repo: "https://github.com/FIGU3IR4/fluflu_pet",
+  image: logofluflu,
+},
+
 ];
 
 const Container = ({ children, className = "" }) => (
@@ -467,9 +471,7 @@ const Footer = () => (
   </footer>
 );
 
-// ————————————————————————————————————————————————
-// PÁGINA PRINCIPAL
-// ————————————————————————————————————————————————
+
 export default function PortfolioVictor() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-600/30 selection:text-white">
