@@ -8,6 +8,8 @@ import logomobigo from "../assets/logomobigo.png";
 import logopedefacil from "../assets/logopedefacil.jpg";
 import logotropicalmate from "../assets/LogoTropical.jpg";
 import logomeandher from "../assets/meandherlogo.png";
+import logorayanefigueira from "../assets/logorf.png";
+import logoAgendamentos from "../assets/logoAgendamentos.png";
 
 export const ME = {
   name: "Victor Figueira",
@@ -42,6 +44,16 @@ export const PROJECTS = [
     repo: "https://github.com/FIGU3IR4/TropicalMate",
     image: logotropicalmate,
   },
+  {
+    title: "Rayane Lash Design",
+    description: "Rayane Agendamentos é um sistema web desenvolvido com React no front-end e Spring Boot no back-end, criado para facilitar o gerenciamento de agendamentos e atendimentos, oferecendo uma interface moderna e intuitiva para organização de horários e clientes.",
+    tech: ["React", "Tailwind", "Node.js / NPM", "Spring Boot", "API REST"],
+
+    category: "frontend", 
+    demo: "https://rayanefigueira-frontend.vercel.app/", 
+    repo: "https://github.com/FIGU3IR4/rayanefigueira-frontend",
+    image: logorayanefigueira,
+  },
     {
     title: "Me and Her",
     description: "Um site onde se encontra uma declaração de amor e uma linha do tempo dos momentos especiais compartilhados.",
@@ -56,12 +68,23 @@ export const PROJECTS = [
     title: "PedeFácil – Plataforma de Restaurantes",
     description: "back-end em Spring Boot. Gestão de cardápio, pedidos e autenticação.",
     tech: ["Spring Boot", "PostgreSQL", "Java", "Spring Data JPA",  "REST APIs", "Hibernate", "Maven", "Docker"],
-    // Categoria: Aparecerá no bloco de CIMA (Interfaces Visuais)
+
     category: "backend", 
-    demo: null, // Substitua pelo link real quando fizer o deploy (ex: Vercel)
+    demo: null, 
     repo: "https://github.com/FIGU3IR4/pedefacil",
     image: logopedefacil,
   },
+ {
+    title: "Api de Agendamentos",
+    description: "Aplicação desenvolvida em java e Springboot para agendamento de serviços e consultas.",
+    tech: ["Spring Boot", "PostgreSQL", "Java", "Spring Data JPA",  "REST APIs", "Hibernate", "Maven", "Docker"],
+ 
+    category: "backend",
+    demo: null, 
+    repo: "https://github.com/FIGU3IR4/api-agendamentos-springboot",
+    image: logoAgendamentos,
+  },
+
   {
     title: "Mobility Go – Sistema de Aluguel de Carros",
     description: "Aplicação em Python puro para gerenciamento de aluguel de carros, incluindo cadastro de veículos e tarifas.",
@@ -72,14 +95,5 @@ export const PROJECTS = [
     repo: "https://github.com/FIGU3IR4/Sistema_carros_versao_final",
     image: logomobigo,
   },
-  {
-    title: "Fluflu Pet – Plataforma de Clínicas Veterinárias",
-    description: "Aplicação desenvolvida em Node.js para agendamento de consultas e gestão de serviços.",
-    tech: ["Node.js"],
-    // Categoria: Aparecerá no bloco de BAIXO (Lógica/Back-end)
-    category: "backend",
-    demo: null, // null remove o botão "Demo"
-    repo: "https://github.com/FIGU3IR4/fluflu_pet",
-    image: logofluflu,
-  },
+ 
 ];
