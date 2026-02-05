@@ -1,12 +1,47 @@
-# React + Vite
+# 💻 Meu Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do meu portfólio profissional. Este projeto foi desenvolvido para centralizar minha trajetória como desenvolvedor, meus projetos práticos e as tecnologias que domino.
 
-Currently, two official plugins are available:
+## 👤 Sobre Mim
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Olá! Meu nome é **Victor Figueira**. Atualmente, sou estudante de **Análise e Desenvolvimento de Sistemas na CESAR School** (Recife/PE). Tenho um perfil híbrido com experiência no ensino de idiomas e uma paixão profunda por transformar ideias em código, focando sempre em soluções funcionais e visualmente atraentes.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este portfólio foi construído com:
+
+- **React.js** (Frontend)
+- **Tailwind CSS** (Estilização responsiva e moderna)
+- **Lucide React** (Ícones)
+- **Vite** (Ferramenta de build de alta performance)
+
+## 📁 Projetos em Destaque
+
+Alguns dos projetos que você encontrará detalhados aqui:
+
+- **Pede Fácil:** Sistema completo de gestão para restaurantes.
+- **TropicalMate:** Landing page focada em conversão para produtos de Tereré.
+- **Rayane Figueira - Lash Designer:** Interface elegante para agendamentos de estética.
+- **API Agendamentos:** Backend robusto desenvolvido em Spring Boot.
+
+## 🛠️ Instalação e Execução
+
+Caso queira rodar este portfólio localmente:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/FIGU3IR4/Portifolio.git](https://github.com/FIGU3IR4/Portifolio.git)
+Instale as dependências:
+
+Bash
+
+npm install
+Inicie o servidor de desenvolvimento:
+
+Bash
+
+npm run dev
+🌐 Deploy
+O projeto está disponível online em: https://figu3ir4.vercel.app
+
+Desenvolvido por Victor Figueira 🚀
